@@ -6,15 +6,23 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #f7f3ee;
-  color: #111;
   min-height: 100vh;
+  background-image: url("images/beauty-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #111;
+}
+
+.overlay {
+  min-height: 100vh;
+  background: rgba(212, 175, 55, 0.8); /* GOLD overlay */
+  padding: 40px 20px;
 }
 
 .page {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
-  padding: 40px 20px;
 }
 
 .header {
@@ -24,97 +32,149 @@ body {
 
 .header h1 {
   font-size: 3rem;
-  letter-spacing: 3px;
-  margin-bottom: 8px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.motto {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.logo {
+  width: 240px;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto 12px auto;
 }
 
 .header p {
   font-size: 1.1rem;
-  color: #555;
+  color: #111;
+  font-weight: bold;
 }
 
+/* CHAT CONTAINER */
 .chat-container {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  padding: 20px;
+  background: rgba(255, 248, 220, 0.95);
+  border: 3px solid #000;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+  padding: 22px;
 }
 
 .chat-box {
-  min-height: 350px;
-  max-height: 500px;
+  min-height: 360px;
+  max-height: 520px;
   overflow-y: auto;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 20px;
-  background: #fcfcfc;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid #000;
+  border-radius: 14px;
 }
 
 .message {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
+/* LABELS */
 .label {
-  font-size: 0.85rem;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
-.bubble {
   display: inline-block;
-  max-width: 75%;
-  padding: 12px 16px;
-  border-radius: 16px;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  padding: 8px 14px;
+  border: 3px solid #000;
+  border-radius: 10px;
 }
 
-.assistant .bubble {
-  background: #f1e7da;
-  color: #111;
-  border-top-left-radius: 4px;
+/* LOREAL ADVISOR LABEL */
+.assistant-label {
+  background: gold;
+  color: #000;
 }
 
+/* USER SIDE */
 .user {
   text-align: right;
 }
 
+.user .label {
+  background: beige;
+  color: #000;
+}
+
+/* BUBBLES */
+.bubble {
+  display: inline-block;
+  max-width: 75%;
+  padding: 14px 18px;
+  border-radius: 16px;
+  line-height: 1.5;
+  border: 3px solid #000;
+  font-size: 1rem;
+}
+
+.assistant .bubble {
+  background: #fff8dc;
+  color: #111;
+  border-top-left-radius: 4px;
+}
+
 .user .bubble {
-  background: #111;
-  color: white;
+  background: #f5f5dc;
+  color: #111;
   border-top-right-radius: 4px;
 }
 
+/* INPUT */
 .input-area {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 #user-input {
   flex: 1;
   padding: 14px;
-  border: 1px solid #bbb;
-  border-radius: 10px;
+  border: 3px solid #000; /* YOUR REQUEST */
+  border-radius: 12px;
   font-size: 1rem;
+  outline: none;
+  background: #fff;
+  color: #000;
 }
 
+#user-input::placeholder {
+  color: #444;
+}
+
+/* BUTTON */
 #send-btn {
-  padding: 14px 20px;
-  border: none;
-  background: #111;
-  color: white;
-  border-radius: 10px;
+  padding: 14px 22px;
+  border: 3px solid #000;
+  background: gold;
+  color: #000;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 1rem;
+  font-weight: bold;
 }
 
 #send-btn:hover {
-  background: #333;
+  background: #e6c200;
 }
 
+/* FOOTER */
 .footer {
   text-align: center;
   margin-top: 18px;
-  color: #666;
-  font-size: 0.9rem;
+  color: #000;
+  font-size: 0.95rem;
+  font-weight: bold;
 }
