@@ -22,11 +22,11 @@ function sendMessage() {
   let fakeReply = "";
 
   if (text.toLowerCase().includes("serum")) {
-    fakeReply = "A serum is usually lightweight and made to target specific skin concerns like dryness, dullness, or fine lines.";
+    fakeReply = "A serum is lightweight and targets specific concerns like dryness, fine lines, or dullness.";
   } else if (text.toLowerCase().includes("moisturizer")) {
-    fakeReply = "A moisturizer helps lock in hydration and protect the skin barrier. It is usually used after serum.";
+    fakeReply = "A moisturizer locks in hydration and protects the skin barrier. It is usually applied after serum.";
   } else if (text.toLowerCase().includes("routine")) {
-    fakeReply = "A simple beauty routine often goes in this order: cleanser, serum, moisturizer, and sunscreen during the day.";
+    fakeReply = "A simple routine is cleanser → serum → moisturizer → sunscreen during the day.";
   } else {
     fakeReply = "I’m here to help with L’Oréal products, skincare, haircare, makeup, and beauty routines.";
   }
@@ -42,6 +42,11 @@ function addMessage(role, labelText, messageText) {
 
   const labelDiv = document.createElement("div");
   labelDiv.className = "label";
+
+  if (role === "assistant") {
+    labelDiv.classList.add("assistant-label");
+  }
+
   labelDiv.textContent = labelText;
 
   const bubbleDiv = document.createElement("div");
