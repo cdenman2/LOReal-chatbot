@@ -4,7 +4,7 @@ const sendBtn = document.getElementById("send-btn");
 
 sendBtn.addEventListener("click", sendMessage);
 
-userInput.addEventListener("keydown", function(event) {
+userInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     sendMessage();
   }
@@ -22,13 +22,14 @@ function sendMessage() {
   if (text.toLowerCase().includes("serum")) {
     reply = "A serum targets specific concerns like dryness, dullness, or fine lines.";
   } else if (text.toLowerCase().includes("moisturizer")) {
-    reply = "A moisturizer locks in hydration and protects your skin barrier.";
+    reply = "A moisturizer locks in hydration and protects the skin barrier.";
+  } else if (text.toLowerCase().includes("routine")) {
+    reply = "A simple routine is cleanser, serum, moisturizer, and sunscreen during the day.";
   } else {
-    reply = "I can help with L’Oréal skincare, haircare, makeup, and routines.";
+    reply = "I can help with L’Oréal skincare, haircare, makeup, and beauty routines.";
   }
 
   addMessage("assistant", "L’Oréal Advisor", reply);
-
   userInput.value = "";
 }
 
