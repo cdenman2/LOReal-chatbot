@@ -7,33 +7,19 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-
-  /* FIXED BACKGROUND */
-  background-color: #e6e6e6; /* LIGHT GREY */
-
-  /* BACKGROUND IMAGE (ONLY WORKS IF FILE EXISTS) */
-  background-image: url("./images/beauty-background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  background: #d9d9d9;
   color: #111;
 }
 
-.overlay {
-  min-height: 100vh;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 40px 20px;
-}
-
 .page {
-  max-width: 950px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 40px 20px 60px;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .header h1 {
@@ -46,13 +32,14 @@ body {
   font-size: 1.3rem;
   font-style: italic;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .logo {
   width: 240px;
+  max-width: 90%;
   display: block;
-  margin: 0 auto 12px auto;
+  margin: 0 auto 14px;
 }
 
 .subtitle {
@@ -60,12 +47,28 @@ body {
   font-weight: bold;
 }
 
-/* CHAT BOX */
+/* PRODUCT BACKGROUND AREA */
+.product-banner {
+  width: 100%;
+  height: 220px;
+  margin: 0 auto 26px;
+  border: 3px solid #000;
+  border-radius: 20px;
+  background-color: #eeeeee;
+  background-image: url("./images/beauty-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* CHAT CONTAINER */
 .chat-container {
   background: #f5f0dc;
   border: 3px solid #000;
   border-radius: 18px;
   padding: 22px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 .chat-box {
@@ -83,7 +86,6 @@ body {
   margin-bottom: 18px;
 }
 
-/* LABELS */
 .label {
   display: inline-block;
   font-size: 0.9rem;
@@ -94,29 +96,27 @@ body {
   border-radius: 10px;
 }
 
-/* LOREAL ADVISOR */
 .assistant-label {
   background: gold;
-  color: black;
+  color: #000;
 }
 
-/* 🔴 USER FIX (RED BOX) */
 .user {
   text-align: right;
 }
 
 .user .label {
   background: red;
-  color: black;
+  color: #000;
 }
 
-/* CHAT BUBBLES */
 .bubble {
   display: inline-block;
   max-width: 75%;
   padding: 14px 18px;
   border-radius: 16px;
   border: 3px solid #000;
+  line-height: 1.5;
 }
 
 .assistant .bubble {
@@ -127,7 +127,6 @@ body {
   background: #ffe5e5;
 }
 
-/* INPUT */
 .input-area {
   display: flex;
   gap: 10px;
@@ -138,13 +137,15 @@ body {
   padding: 14px;
   border: 3px solid #000;
   border-radius: 12px;
+  font-size: 1rem;
+  background: #fff;
 }
 
-/* BUTTON */
 #send-btn {
   padding: 14px 22px;
   border: 3px solid #000;
   background: gold;
+  color: #000;
   font-weight: bold;
   border-radius: 12px;
   cursor: pointer;
@@ -154,9 +155,30 @@ body {
   background: #e6c200;
 }
 
-/* FOOTER */
 .footer {
   text-align: center;
-  margin-top: 18px;
+  margin-top: 20px;
   font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .header h1 {
+    font-size: 2.3rem;
+  }
+
+  .product-banner {
+    height: 160px;
+  }
+
+  .bubble {
+    max-width: 92%;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  #send-btn {
+    width: 100%;
+  }
 }
