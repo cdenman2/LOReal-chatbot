@@ -7,16 +7,20 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  background-image: url("images/beauty-background.jpg");
+
+  /* GOLD BACKGROUND + IMAGE */
+  background-color: gold;
+  background-image: url("./images/beauty-background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   color: #111;
 }
 
 .overlay {
   min-height: 100vh;
-  background: rgba(212, 175, 55, 0.8); /* GOLD overlay */
+  background: rgba(212, 175, 55, 0.82);
   padding: 40px 20px;
 }
 
@@ -41,20 +45,17 @@ body {
   font-style: italic;
   font-weight: bold;
   color: #000;
-  letter-spacing: 1px;
   margin-bottom: 12px;
 }
 
 .logo {
   width: 240px;
-  max-width: 90%;
   display: block;
   margin: 0 auto 12px auto;
 }
 
-.header p {
+.subtitle {
   font-size: 1.1rem;
-  color: #111;
   font-weight: bold;
 }
 
@@ -63,7 +64,6 @@ body {
   background: rgba(255, 248, 220, 0.95);
   border: 3px solid #000;
   border-radius: 18px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
   padding: 22px;
 }
 
@@ -93,13 +93,13 @@ body {
   border-radius: 10px;
 }
 
-/* LOREAL ADVISOR LABEL */
+/* LOREAL ADVISOR */
 .assistant-label {
   background: gold;
   color: #000;
 }
 
-/* USER SIDE */
+/* USER */
 .user {
   text-align: right;
 }
@@ -109,49 +109,34 @@ body {
   color: #000;
 }
 
-/* BUBBLES */
+/* CHAT BUBBLES */
 .bubble {
   display: inline-block;
   max-width: 75%;
   padding: 14px 18px;
   border-radius: 16px;
-  line-height: 1.5;
   border: 3px solid #000;
-  font-size: 1rem;
 }
 
 .assistant .bubble {
   background: #fff8dc;
-  color: #111;
-  border-top-left-radius: 4px;
 }
 
 .user .bubble {
   background: #f5f5dc;
-  color: #111;
-  border-top-right-radius: 4px;
 }
 
 /* INPUT */
 .input-area {
   display: flex;
   gap: 10px;
-  align-items: center;
 }
 
 #user-input {
   flex: 1;
   padding: 14px;
-  border: 3px solid #000; /* YOUR REQUEST */
+  border: 3px solid #000;
   border-radius: 12px;
-  font-size: 1rem;
-  outline: none;
-  background: #fff;
-  color: #000;
-}
-
-#user-input::placeholder {
-  color: #444;
 }
 
 /* BUTTON */
@@ -159,11 +144,9 @@ body {
   padding: 14px 22px;
   border: 3px solid #000;
   background: gold;
-  color: #000;
+  font-weight: bold;
   border-radius: 12px;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
 }
 
 #send-btn:hover {
@@ -174,7 +157,5 @@ body {
 .footer {
   text-align: center;
   margin-top: 18px;
-  color: #000;
-  font-size: 0.95rem;
   font-weight: bold;
 }
