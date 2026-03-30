@@ -13,30 +13,26 @@ userInput.addEventListener("keydown", function(event) {
 function sendMessage() {
   const text = userInput.value.trim();
 
-  if (text === "") {
-    return;
-  }
+  if (text === "") return;
 
   addMessage("user", "You", text);
 
-  let fakeReply = "";
+  let reply = "";
 
   if (text.toLowerCase().includes("serum")) {
-    fakeReply = "A serum is lightweight and targets specific concerns like dryness, fine lines, or dullness.";
+    reply = "A serum targets specific concerns like dryness, dullness, or fine lines.";
   } else if (text.toLowerCase().includes("moisturizer")) {
-    fakeReply = "A moisturizer locks in hydration and protects the skin barrier. It is usually applied after serum.";
-  } else if (text.toLowerCase().includes("routine")) {
-    fakeReply = "A simple routine is cleanser → serum → moisturizer → sunscreen during the day.";
+    reply = "A moisturizer locks in hydration and protects your skin barrier.";
   } else {
-    fakeReply = "I’m here to help with L’Oréal products, skincare, haircare, makeup, and beauty routines.";
+    reply = "I can help with L’Oréal skincare, haircare, makeup, and routines.";
   }
 
-  addMessage("assistant", "L’Oréal Advisor", fakeReply);
+  addMessage("assistant", "L’Oréal Advisor", reply);
 
   userInput.value = "";
 }
 
-function addMessage(role, labelText, messageText) {
+function addMessage(role, labelText, text) {
   const messageDiv = document.createElement("div");
   messageDiv.className = `message ${role}`;
 
@@ -51,7 +47,7 @@ function addMessage(role, labelText, messageText) {
 
   const bubbleDiv = document.createElement("div");
   bubbleDiv.className = "bubble";
-  bubbleDiv.textContent = messageText;
+  bubbleDiv.textContent = text;
 
   messageDiv.appendChild(labelDiv);
   messageDiv.appendChild(bubbleDiv);
