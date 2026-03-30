@@ -20,16 +20,15 @@ function sendMessage() {
   let reply = "";
 
   if (text.toLowerCase().includes("serum")) {
-    reply = "A serum targets specific concerns like dryness, dullness, or fine lines.";
+    reply = "A serum targets concerns like dryness, fine lines, and dullness.";
   } else if (text.toLowerCase().includes("moisturizer")) {
-    reply = "A moisturizer locks in hydration and protects the skin barrier.";
-  } else if (text.toLowerCase().includes("routine")) {
-    reply = "A simple routine is cleanser, serum, moisturizer, and sunscreen during the day.";
+    reply = "A moisturizer locks in hydration and protects your skin.";
   } else {
-    reply = "I can help with L’Oréal skincare, haircare, makeup, and beauty routines.";
+    reply = "I can help with L’Oréal skincare, haircare, makeup, and routines.";
   }
 
   addMessage("assistant", "L’Oréal Advisor", reply);
+
   userInput.value = "";
 }
 
