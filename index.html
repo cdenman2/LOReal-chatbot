@@ -7,49 +7,47 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <div class="page">
 
-  <div class="overlay">
-    <div class="page">
+    <header class="header">
+      <h1>L’ORÉAL</h1>
+      <p class="motto">"Because We’re All Worth It"</p>
 
-      <header class="header">
-        <h1>L’ORÉAL</h1>
+      <img
+        src="./images/loreal-logo.png"
+        alt="L'Oréal Logo"
+        class="logo"
+      >
 
-        <p class="motto">"Because We’re All Worth It"</p>
+      <p class="subtitle">Smart Routine &amp; Product Advisor</p>
+    </header>
 
-        <img src="./images/loreal-logo.png" alt="L'Oréal Logo" class="logo">
+    <div class="product-banner"></div>
 
-        <p class="subtitle">Smart Routine & Product Advisor</p>
-      </header>
-
-      <main class="chat-container">
-
-        <div id="chat-box" class="chat-box">
-
-          <div class="message assistant">
-            <div class="label assistant-label">L’Oréal Advisor</div>
-            <div class="bubble">
-              Hello! I can help with L’Oréal skincare, haircare, makeup, and beauty routines.
-            </div>
+    <main class="chat-container">
+      <div id="chat-box" class="chat-box">
+        <div class="message assistant">
+          <div class="label assistant-label">L’Oréal Advisor</div>
+          <div class="bubble">
+            Hello! I can help with L’Oréal skincare, haircare, makeup, and beauty routines.
           </div>
-
         </div>
+      </div>
 
-        <div class="input-area">
-          <input
-            type="text"
-            id="user-input"
-            placeholder="Ask me about any L’Oréal product or routine..."
-          >
-          <button id="send-btn">Send</button>
-        </div>
+      <div class="input-area">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask me about any L’Oréal product or routine..."
+        >
+        <button id="send-btn">Send</button>
+      </div>
+    </main>
 
-      </main>
+    <footer class="footer">
+      <p>© 2026 L’Oréal-inspired student project</p>
+    </footer>
 
-      <footer class="footer">
-        <p>© 2026 L’Oréal-inspired student project</p>
-      </footer>
-
-    </div>
   </div>
 
   <script src="./script.js"></script>
