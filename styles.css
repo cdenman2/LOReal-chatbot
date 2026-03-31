@@ -20,6 +20,7 @@ body {
   padding: 40px 20px 60px;
 }
 
+/* HEADER */
 .header {
   text-align: center;
   margin-bottom: 24px;
@@ -82,7 +83,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .product-banner {
@@ -95,8 +95,22 @@ body {
   background-image: url("./images/beauty-background2.jpg");
 }
 
-/* CHAT CONTAINER - HALF LIGHT PINK / HALF LIGHT BLUE */
+/* OUTER CHAT CONTAINER (BEIGE) */
 .chat-container {
+  background: #f5f0dc;
+  border: 3px solid #000;
+  border-radius: 18px;
+  padding: 22px;
+}
+
+/* 🔥 INNER CHAT BOX (SUNSET SPLIT) */
+.chat-box {
+  min-height: 360px;
+  max-height: 520px;
+  overflow-y: auto;
+  padding: 12px;
+  margin-bottom: 20px;
+
   background: linear-gradient(
     to bottom,
     #f8c8dc 0%,
@@ -104,23 +118,12 @@ body {
     #cce6ff 50%,
     #cce6ff 100%
   );
-  border: 3px solid #000;
-  border-radius: 18px;
-  padding: 22px;
-}
 
-/* CHAT BOX */
-.chat-box {
-  min-height: 360px;
-  max-height: 520px;
-  overflow-y: auto;
-  padding: 12px;
-  margin-bottom: 20px;
-  background: rgba(255, 255, 255, 0.88);
   border: 3px solid #000;
   border-radius: 14px;
 }
 
+/* MESSAGES */
 .message {
   margin-bottom: 18px;
 }
@@ -136,11 +139,13 @@ body {
   border-radius: 10px;
 }
 
+/* LOREAL ADVISOR */
 .assistant-label {
   background: gold;
   color: #000;
 }
 
+/* USER */
 .user {
   text-align: right;
 }
@@ -157,7 +162,6 @@ body {
   padding: 14px 18px;
   border-radius: 16px;
   border: 3px solid #000;
-  line-height: 1.5;
   background: #fff8dc;
 }
 
@@ -194,12 +198,14 @@ body {
   background: #e6c200;
 }
 
+/* FOOTER */
 .footer {
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
 }
 
+/* RESPONSIVE */
 @media (max-width: 700px) {
   .header h1 {
     font-size: 2.3rem;
