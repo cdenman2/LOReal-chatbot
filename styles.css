@@ -38,52 +38,59 @@ body {
   margin-bottom: 14px;
 }
 
-.logo {
-  width: 240px;
-  max-width: 90%;
-  display: block;
-  margin: 0 auto 14px;
-}
-
 .subtitle {
   font-size: 1.1rem;
   font-weight: bold;
+  margin-top: 12px;
 }
 
-.product-banner {
-  width: 100%;
-  height: 220px;
-  margin-bottom: 26px;
-  border: 3px solid #000;
-  border-radius: 20px;
-  background-image: url("./images/beauty-background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #e0e0e0;
+.logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
+.top-logo-wrap {
+  width: 260px;
+  height: 90px;
+}
+
+.bottom-logo-wrap {
+  width: 260px;
+  height: 120px;
+  margin-top: 18px;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.product-banner,
 .product-banner-bottom {
   width: 100%;
   height: 220px;
-  margin-top: 26px;
   border: 3px solid #000;
   border-radius: 20px;
-  background-image: url("./images/beauty-background2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
-.bottom-logo-container {
-  text-align: center;
-  margin-top: 20px;
+.product-banner {
+  margin-bottom: 26px;
+  background-image: url("./images/beauty-background.jpg");
 }
 
-.bottom-logo {
-  width: 200px;
-  max-width: 80%;
+.product-banner-bottom {
+  margin-top: 26px;
+  background-image: url("./images/beauty-background2.jpg");
 }
 
 .chat-container {
@@ -120,7 +127,7 @@ body {
 
 .assistant-label {
   background: gold;
-  color: black;
+  color: #000;
 }
 
 .user {
@@ -129,7 +136,7 @@ body {
 
 .user .label {
   background: red;
-  color: black;
+  color: #000;
 }
 
 .bubble {
@@ -138,9 +145,7 @@ body {
   padding: 14px 18px;
   border-radius: 16px;
   border: 3px solid #000;
-}
-
-.assistant .bubble {
+  line-height: 1.5;
   background: #fff8dc;
 }
 
@@ -158,12 +163,15 @@ body {
   padding: 14px;
   border: 3px solid #000;
   border-radius: 12px;
+  font-size: 1rem;
+  background: #fff;
 }
 
 #send-btn {
   padding: 14px 22px;
   border: 3px solid #000;
   background: gold;
+  color: #000;
   font-weight: bold;
   border-radius: 12px;
   cursor: pointer;
@@ -177,4 +185,27 @@ body {
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .header h1 {
+    font-size: 2.3rem;
+  }
+
+  .product-banner,
+  .product-banner-bottom {
+    height: 160px;
+  }
+
+  .bubble {
+    max-width: 92%;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  #send-btn {
+    width: 100%;
+  }
 }
