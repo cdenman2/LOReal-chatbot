@@ -44,6 +44,7 @@ body {
   margin-top: 12px;
 }
 
+/* LOGOS */
 .logo-wrap {
   display: flex;
   justify-content: center;
@@ -65,12 +66,10 @@ body {
 .logo {
   max-width: 100%;
   max-height: 100%;
-  width: auto;
-  height: auto;
   object-fit: contain;
-  display: block;
 }
 
+/* PRODUCT IMAGES */
 .product-banner,
 .product-banner-bottom {
   width: 100%;
@@ -80,7 +79,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .product-banner {
@@ -93,13 +91,22 @@ body {
   background-image: url("./images/beauty-background2.jpg");
 }
 
+/* 🔥 SUNSET SPLIT BACKGROUND (THIS IS YOUR CHANGE) */
 .chat-container {
-  background: #f5f0dc;
+  background: linear-gradient(
+    to bottom,
+    #f8c8dc 0%,   /* light pink */
+    #f8c8dc 50%,
+    #cce6ff 50%,  /* light blue */
+    #cce6ff 100%
+  );
+
   border: 3px solid #000;
   border-radius: 18px;
   padding: 22px;
 }
 
+/* CHAT BOX */
 .chat-box {
   min-height: 360px;
   max-height: 520px;
@@ -115,6 +122,7 @@ body {
   margin-bottom: 18px;
 }
 
+/* LABELS */
 .label {
   display: inline-block;
   font-size: 0.9rem;
@@ -127,7 +135,7 @@ body {
 
 .assistant-label {
   background: gold;
-  color: #000;
+  color: black;
 }
 
 .user {
@@ -136,16 +144,16 @@ body {
 
 .user .label {
   background: red;
-  color: #000;
+  color: black;
 }
 
+/* BUBBLES */
 .bubble {
   display: inline-block;
   max-width: 75%;
   padding: 14px 18px;
   border-radius: 16px;
   border: 3px solid #000;
-  line-height: 1.5;
   background: #fff8dc;
 }
 
@@ -153,6 +161,7 @@ body {
   background: #ffe5e5;
 }
 
+/* INPUT */
 .input-area {
   display: flex;
   gap: 10px;
@@ -163,15 +172,12 @@ body {
   padding: 14px;
   border: 3px solid #000;
   border-radius: 12px;
-  font-size: 1rem;
-  background: #fff;
 }
 
 #send-btn {
   padding: 14px 22px;
   border: 3px solid #000;
   background: gold;
-  color: #000;
   font-weight: bold;
   border-radius: 12px;
   cursor: pointer;
@@ -181,31 +187,9 @@ body {
   background: #e6c200;
 }
 
+/* FOOTER */
 .footer {
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
-}
-
-@media (max-width: 700px) {
-  .header h1 {
-    font-size: 2.3rem;
-  }
-
-  .product-banner,
-  .product-banner-bottom {
-    height: 160px;
-  }
-
-  .bubble {
-    max-width: 92%;
-  }
-
-  .input-area {
-    flex-direction: column;
-  }
-
-  #send-btn {
-    width: 100%;
-  }
 }
