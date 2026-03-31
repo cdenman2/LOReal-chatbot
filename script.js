@@ -2,6 +2,10 @@ const chatBox = document.getElementById("chat-box");
 const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
 
+const workerUrl = "PASTE_YOUR_WORKER_URL_HERE";
+
+let messages = [];
+
 sendBtn.addEventListener("click", sendMessage);
 
 userInput.addEventListener("keydown", function (event) {
@@ -10,26 +14,37 @@ userInput.addEventListener("keydown", function (event) {
   }
 });
 
-function sendMessage() {
+async function sendMessage() {
   const text = userInput.value.trim();
-
   if (text === "") return;
 
   addMessage("user", "You", text);
-
-  let reply = "";
-
-  if (text.toLowerCase().includes("serum")) {
-    reply = "A serum targets concerns like dryness, fine lines, and dullness.";
-  } else if (text.toLowerCase().includes("moisturizer")) {
-    reply = "A moisturizer locks in hydration and protects your skin.";
-  } else {
-    reply = "I can help with L’Oréal skincare, haircare, makeup, and routines.";
-  }
-
-  addMessage("assistant", "L’Oréal Advisor", reply);
+  messages.push({ role: "user", content: text });
 
   userInput.value = "";
+
+  try {
+    const response = await fetch(workerUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ messages })
+    });
+
+    const data = await response.json();
+
+    if (data.reply) {
+      addMessage("assistant", "L’Oréal Advisor", data.reply);
+      messages.push({ role: "assistant", content: data.reply });
+    } else if (data.error) {
+      addMessage("assistant", "L’Oréal Advisor", "Sorry, there was an error: " + data.error);
+    } else {
+      addMessage("assistant", "L’Oréal Advisor", "Sorry, something went wrong.");
+    }
+  } catch (error) {
+    addMessage("assistant", "L’Oréal Advisor", "Sorry, I could not connect right now.");
+  }
 }
 
 function addMessage(role, labelText, text) {
