@@ -1,4 +1,5 @@
-const chatBox = document.getElementById("chat-box");
+console.log("WEBSITE SCRIPT LOADED");
+alert("WEBSITE SCRIPT LOADED");const chatBox = document.getElementById("chat-box");
 const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
 
