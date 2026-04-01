@@ -2,7 +2,7 @@ const chatBox = document.getElementById("chat-box");
 const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
 
-const workerUrl = "PASTE_YOUR_WORKER_URL_HERE";
+const workerUrl = "https://loreal-worker.loreal-chatbot-nick.workers.dev";
 
 let messages = [];
 
