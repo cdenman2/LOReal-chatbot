@@ -38,12 +38,12 @@ async function sendMessage() {
       addMessage("assistant", "L’Oréal Advisor", data.reply);
       messages.push({ role: "assistant", content: data.reply });
     } else if (data.error) {
-      addMessage("assistant", "L’Oréal Advisor", "Sorry, there was an error: " + data.error);
+      addMessage("assistant", "L’Oréal Advisor", "Error: " + data.error);
     } else {
-      addMessage("assistant", "L’Oréal Advisor", "Sorry, something went wrong.");
+      addMessage("assistant", "L’Oréal Advisor", "Error: Something unexpected happened.");
     }
   } catch (error) {
-    addMessage("assistant", "L’Oréal Advisor", "Sorry, I could not connect right now.");
+    addMessage("assistant", "L’Oréal Advisor", "Error: Could not connect to the Worker.");
   }
 }
 
