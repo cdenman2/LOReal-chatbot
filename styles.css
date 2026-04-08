@@ -73,12 +73,12 @@ body {
   display: block;
 }
 
-/* PRODUCT IMAGES */
+/* PRODUCT IMAGES (RED BORDER FIX) */
 .product-banner,
 .product-banner-bottom {
   width: 100%;
   height: 220px;
-  border: 3px solid #000;
+  border: 3px solid #d71920; /* L'Oréal red */
   border-radius: 20px;
   background-size: cover;
   background-position: center;
@@ -95,22 +95,22 @@ body {
   background-image: url("./images/beauty-background2.jpg");
 }
 
-/* OUTER CHAT CONTAINER = L'OREAL RED */
+/* CHAT CONTAINER (OUTER RED) */
 .chat-container {
-  background: #d71920;
+  background: #d71920; /* L'Oréal red */
   border: 3px solid #000;
   border-radius: 18px;
   padding: 22px;
 }
 
-/* INNER CHAT BOX = L'OREAL GOLD */
+/* CHAT BOX (INNER GOLD) */
 .chat-box {
   min-height: 360px;
   max-height: 520px;
   overflow-y: auto;
   padding: 12px;
   margin-bottom: 20px;
-  background: #d4af37;
+  background: #d4af37; /* L'Oréal gold */
   border: 3px solid #000;
   border-radius: 14px;
 }
@@ -120,34 +120,35 @@ body {
   margin-bottom: 18px;
 }
 
-/* LABELS */
+/* LABEL BASE */
 .label {
   display: inline-block;
   font-size: 0.9rem;
   font-weight: bold;
   margin-bottom: 8px;
   padding: 8px 14px;
-  border: 3px solid #000;
   border-radius: 10px;
+  border: 3px solid #000;
 }
 
-/* LOREAL ADVISOR LABEL */
+/* L’OREAL ADVISOR (GOLD + BLACK) */
 .assistant-label {
-  background: gold;
+  background: #d4af37;
   color: #000;
 }
 
-/* USER */
+/* USER ALIGNMENT */
 .user {
   text-align: right;
 }
 
+/* YOU (RED + BLACK) */
 .user .label {
-  background: red;
+  background: #d71920;
   color: #000;
 }
 
-/* BUBBLES */
+/* MESSAGE BUBBLES */
 .bubble {
   display: inline-block;
   max-width: 75%;
@@ -180,7 +181,7 @@ body {
 #send-btn {
   padding: 14px 22px;
   border: 3px solid #000;
-  background: gold;
+  background: #d4af37; /* gold button */
   color: #000;
   font-weight: bold;
   border-radius: 12px;
