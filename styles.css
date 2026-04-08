@@ -95,30 +95,22 @@ body {
   background-image: url("./images/beauty-background2.jpg");
 }
 
-/* OUTER CHAT CONTAINER (BEIGE) */
+/* OUTER CHAT CONTAINER = L'OREAL RED */
 .chat-container {
-  background: #f5f0dc;
+  background: #d71920;
   border: 3px solid #000;
   border-radius: 18px;
   padding: 22px;
 }
 
-/* 🔥 INNER CHAT BOX (SUNSET SPLIT) */
+/* INNER CHAT BOX = L'OREAL GOLD */
 .chat-box {
   min-height: 360px;
   max-height: 520px;
   overflow-y: auto;
   padding: 12px;
   margin-bottom: 20px;
-
-  background: linear-gradient(
-    to bottom,
-    #f8c8dc 0%,
-    #f8c8dc 50%,
-    #cce6ff 50%,
-    #cce6ff 100%
-  );
-
+  background: #d4af37;
   border: 3px solid #000;
   border-radius: 14px;
 }
@@ -139,7 +131,7 @@ body {
   border-radius: 10px;
 }
 
-/* LOREAL ADVISOR */
+/* LOREAL ADVISOR LABEL */
 .assistant-label {
   background: gold;
   color: #000;
@@ -163,6 +155,7 @@ body {
   border-radius: 16px;
   border: 3px solid #000;
   background: #fff8dc;
+  line-height: 1.5;
 }
 
 .user .bubble {
