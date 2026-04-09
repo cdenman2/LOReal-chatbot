@@ -25,6 +25,16 @@
     #ff4d4d,
     #ffb3b3
   );
+
+  --loreal-white: linear-gradient(
+    135deg,
+    #ffffff,
+    #f8f8f8,
+    #ececec,
+    #ffffff,
+    #dcdcdc,
+    #ffffff
+  );
 }
 
 body {
@@ -40,7 +50,7 @@ body {
 .page {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px 20px 60px;
+  padding: 30px 20px 60px;
 }
 
 /* HEADER */
@@ -49,22 +59,12 @@ body {
   margin-bottom: 24px;
 }
 
-/* LOREAL TITLE */
-.header h1 {
-  font-size: 3rem;
-  letter-spacing: 4px;
-  margin-bottom: 10px;
-  background: #ffffff;
-  border: 6px solid #000;
-  display: inline-block;
-  padding: 10px 20px;
-}
-
-/* MOTTO (METALLIC GOLD BOX) */
+/* MOTTO (GOLD BOX) */
 .motto {
   font-size: 1.3rem;
   font-style: italic;
   font-weight: bold;
+  margin-top: 14px;
   margin-bottom: 14px;
   background: var(--loreal-gold);
   color: #000;
@@ -83,7 +83,7 @@ body {
   margin-bottom: 14px;
 }
 
-/* FACT BOX (METALLIC GOLD + RED BORDER) */
+/* FACT BOX */
 .fact-box {
   background: var(--loreal-gold);
   border: 6px solid #d71920;
@@ -107,7 +107,7 @@ body {
   line-height: 1.5;
 }
 
-/* LOGOS (METALLIC RED BACKGROUND) */
+/* LOGOS */
 .logo-wrap {
   display: flex;
   justify-content: center;
@@ -126,9 +126,10 @@ body {
               0 4px 10px rgba(0,0,0,0.5);
 }
 
+/* TOP LOGO BIGGER */
 .top-logo-wrap {
-  width: 260px;
-  height: 90px;
+  width: 380px;
+  height: 130px;
 }
 
 .bottom-logo-wrap {
@@ -166,7 +167,7 @@ body {
   background-image: url("./images/beauty-background2.jpg");
 }
 
-/* CHAT CONTAINER (METALLIC RED) */
+/* CHAT CONTAINER */
 .chat-container {
   background: var(--loreal-red);
   border: 6px solid #000;
@@ -177,7 +178,7 @@ body {
               0 4px 10px rgba(0,0,0,0.5);
 }
 
-/* CHAT BOX (METALLIC GOLD) */
+/* CHAT BOX */
 .chat-box {
   min-height: 360px;
   max-height: 520px;
@@ -190,6 +191,7 @@ body {
   box-shadow: inset 0 2px 4px rgba(255,255,255,0.6),
               inset 0 -3px 6px rgba(0,0,0,0.3),
               0 4px 8px rgba(0,0,0,0.4);
+  font-weight: bold;
 }
 
 /* MESSAGES */
@@ -197,7 +199,7 @@ body {
   margin-bottom: 18px;
 }
 
-/* LABEL BASE */
+/* LABEL BASE - UNCHANGED LOOK */
 .label {
   display: inline-block;
   font-size: 0.9rem;
@@ -208,7 +210,7 @@ body {
   border: 6px solid #000;
 }
 
-/* LOREAL ADVISOR (GOLD) */
+/* LOREAL ADVISOR - UNCHANGED */
 .assistant-label {
   background: var(--loreal-gold);
   color: #000;
@@ -219,7 +221,7 @@ body {
   text-align: right;
 }
 
-/* YOU LABEL (RED) */
+/* YOU LABEL - UNCHANGED */
 .user .label {
   background: var(--loreal-red);
   color: #000;
@@ -234,6 +236,8 @@ body {
   border: 6px solid #000;
   background: #fff8dc;
   line-height: 1.5;
+  font-weight: bold;
+  color: #000;
 }
 
 .user .bubble {
@@ -246,34 +250,47 @@ body {
   gap: 10px;
 }
 
+/* TYPING AREA = METALLIC WHITE */
 #user-input {
   flex: 1;
   padding: 14px;
   border: 6px solid #000;
   border-radius: 12px;
   font-size: 1rem;
-  background: #fff;
+  background: var(--loreal-white);
+  color: #000;
+  font-weight: bold;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.8),
+              inset 0 -3px 6px rgba(0,0,0,0.2),
+              0 4px 8px rgba(0,0,0,0.3);
 }
 
+#user-input::placeholder {
+  color: #000;
+  font-weight: bold;
+}
+
+/* SEND BUTTON = METALLIC WHITE */
 #send-btn {
   padding: 14px 22px;
   border: 6px solid #000;
-  background: var(--loreal-gold);
+  background: var(--loreal-white);
   color: #000;
   font-weight: bold;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: inset 0 2px 4px rgba(255,255,255,0.6),
-              inset 0 -3px 6px rgba(0,0,0,0.3);
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.8),
+              inset 0 -3px 6px rgba(0,0,0,0.2),
+              0 4px 8px rgba(0,0,0,0.3);
 }
 
 #send-btn:hover {
   background: linear-gradient(
     135deg,
-    #fff6c5,
-    #ffd700,
-    #e6c200,
-    #b8962e
+    #ffffff,
+    #f0f0f0,
+    #d9d9d9,
+    #ffffff
   );
 }
 
@@ -286,8 +303,9 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 700px) {
-  .header h1 {
-    font-size: 2.3rem;
+  .top-logo-wrap {
+    width: 300px;
+    height: 110px;
   }
 
   .product-banner,
