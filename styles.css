@@ -33,11 +33,19 @@
   --loreal-white: linear-gradient(
     135deg,
     #ffffff,
-    #f8f8f8,
+    #f4f4f4,
     #e6e6e6,
-    #ffffff,
-    #dcdcdc,
     #ffffff
+  );
+
+  /* FIXED DARK METALLIC BLACK (NO WHITE GLARE) */
+  --metal-black: linear-gradient(
+    135deg,
+    #111,
+    #000,
+    #222,
+    #000,
+    #111
   );
 }
 
@@ -57,45 +65,48 @@ body {
   padding: 30px 20px 60px;
 }
 
-/* ---------- METALLIC BORDER SYSTEM ---------- */
-.metal-border-black {
-  border: 6px solid transparent;
-  border-image: linear-gradient(
-    135deg,
-    #ffffff,
-    #000000,
-    #444444,
-    #000000,
-    #ffffff
-  ) 1;
-}
-
-.metal-border-red {
-  border: 6px solid transparent;
-  border-image: var(--loreal-red) 1;
-}
-
-.metal-border-gold {
-  border: 6px solid transparent;
-  border-image: var(--loreal-gold) 1;
-}
-
 /* ---------- HEADER ---------- */
 .header {
   text-align: center;
   margin-bottom: 24px;
 }
 
+/* TOP LOGO */
 .top-logo-wrap {
   background: var(--loreal-red);
   border-radius: 14px;
   padding: 12px;
+
   width: 420px;
   height: 150px;
+
   margin: 0 auto 16px auto;
 
   border: 6px solid transparent;
-  border-image: linear-gradient(#fff, #000, #444, #000, #fff) 1;
+  border-image: var(--metal-black) 1;
+
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.4),
+    inset 0 -4px 6px rgba(0,0,0,0.5);
+}
+
+/* BOTTOM LOGO (FIXED SIZE) */
+.bottom-logo-wrap {
+  background: var(--loreal-red);
+  border-radius: 14px;
+  padding: 8px;
+
+  width: 200px;
+  height: 90px;
+
+  margin: 20px auto;
+
+  border: 6px solid transparent;
+  border-image: var(--metal-black) 1;
+
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.4),
+    inset 0 -3px 6px rgba(0,0,0,0.5);
 }
 
 .logo {
@@ -132,9 +143,11 @@ body {
 
   border: 6px solid transparent;
   border-image: var(--loreal-red) 1;
+
+  text-align: center;
 }
 
-/* ---------- IMAGES ---------- */
+/* ---------- PRODUCT IMAGES ---------- */
 .product-banner,
 .product-banner-bottom {
   width: 100%;
@@ -165,7 +178,11 @@ body {
   padding: 22px;
 
   border: 6px solid transparent;
-  border-image: linear-gradient(#fff, #000, #444, #000, #fff) 1;
+  border-image: var(--metal-black) 1;
+
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.4),
+    inset 0 -4px 6px rgba(0,0,0,0.5);
 }
 
 /* ---------- CHAT BOX ---------- */
@@ -180,7 +197,7 @@ body {
   border-radius: 16px;
 
   border: 6px solid transparent;
-  border-image: linear-gradient(#fff, #000, #444, #000, #fff) 1;
+  border-image: var(--metal-black) 1;
 }
 
 /* ---------- MESSAGES ---------- */
@@ -192,7 +209,7 @@ body {
   text-align: right;
 }
 
-/* LABELS (unchanged colors but metallic borders) */
+/* LABELS */
 .label {
   display: inline-block;
   margin-bottom: 6px;
@@ -200,7 +217,7 @@ body {
   border-radius: 10px;
 
   border: 6px solid transparent;
-  border-image: linear-gradient(#fff, #000, #444, #000, #fff) 1;
+  border-image: var(--metal-black) 1;
 }
 
 .assistant-label {
@@ -221,7 +238,9 @@ body {
   background: var(--loreal-white);
 
   border: 6px solid transparent;
-  border-image: linear-gradient(#fff, #000, #444, #000, #fff) 1;
+  border-image: var(--metal-black) 1;
+
+  line-height: 1.5;
 }
 
 /* ---------- INPUT ---------- */
@@ -238,7 +257,7 @@ body {
   background: var(--loreal-white);
 
   border: 6px solid transparent;
-  border-image: linear-gradient(#fff, #000, #444, #000, #fff) 1;
+  border-image: var(--metal-black) 1;
 }
 
 #send-btn {
@@ -249,7 +268,7 @@ body {
   background: var(--loreal-white);
 
   border: 6px solid transparent;
-  border-image: linear-gradient(#fff, #000, #444, #000, #fff) 1;
+  border-image: var(--metal-black) 1;
 }
 
 /* ---------- FOOTER ---------- */
